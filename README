@@ -1,0 +1,16 @@
+RESET.SASS
+==============
+A direct port of Eric Meyer's reset.css file to SASS. His original lives here:
+http://meyerweb.com/eric/tools/css/reset/
+
+CSS3.SASS
+==============
+SASS helper functions to ease the use of some shiny new CSS3 rules.
+
+A quick example:
+
+div#page
+  +border-radius(5px, 10px, 5px, 10px)
+  +box-shadow(#000, 0px, 3px, 5px)
+  +gradient(#00baff, #00baff-#111)
+  +box-sizing(border-box)
