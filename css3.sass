@@ -2,32 +2,52 @@
   overflow: hidden
   zoom: 1
 
-=border-radius(!tl, !tr, !br, !bl)
-  -webkit-border-top-left-radius= !tl
-  -webkit-border-top-right-radius= !tr
-  -webkit-border-bottom-right-radius= !br
-  -webkit-border-bottom-left-radius= !bl
+=border-radius($tl, $tr, $br, $bl)
+  -webkit-border-top-left-radius: $tl
+  -webkit-border-top-right-radius: $tr
+  -webkit-border-bottom-right-radius: $br
+  -webkit-border-bottom-left-radius: $bl
 
-  -moz-border-radius-topleft= !tl
-  -moz-border-radius-topright= !tr
-  -moz-border-radius-bottomright= !br
-  -moz-border-radius-bottomleft= !bl
+  -moz-border-radius-topleft: $tl
+  -moz-border-radius-topright: $tr
+  -moz-border-radius-bottomright: $br
+  -moz-border-radius-bottomleft: $bl
 
-  border-top-left-radius= !tl
-  border-top-right-radius= !tr
-  border-bottom-right-radius= !br
-  border-bottom-left-radius= !bl
+  border-top-left-radius: $tl
+  border-top-right-radius: $tr
+  border-bottom-right-radius: $br
+  border-bottom-left-radius: $bl
   
-=box-shadow(!c, !x, !y, !d)
-  -webkit-box-shadow= !c !x !y !d
-  -moz-box-shadow= !c !x !y !d
-  box-shadow= !c !x !y !d
+=box-shadow($c, $x, $y, $d)
+  -webkit-box-shadow: $c $x $y $d
+  -moz-box-shadow: $c $x $y $d
+  box-shadow: $c $x $y $d
 
-=gradient(!top, !bottom)
-  background= !bottom
-  background-image= -webkit-gradient(linear, left top, left bottom, from(!top), to(!bottom))
+=gradient($top, $bottom)
+  background: $bottom
+  background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom))
 
-=box-sizing(!mode)
-  -webkit-box-sizing= !mode
-  -moz-box-sizing= !mode
-  box-sizing= !mode
+=box-sizing($mode)
+  -webkit-box-sizing: $mode
+  -moz-box-sizing: $mode
+  box-sizing: $mode
+  
+=column-width($n)
+  -moz-column-width: $n
+  -webkit-column-width: $n
+  column-width: $n
+
+=column-gap($n)
+  -moz-column-gap: $n
+  -webkit-column-gap: $n
+  column-gap: $n
+  
+=column-count($n)
+  -moz-column-count: $n
+  -webkit-column-count: $n
+  column-count: $n
+  
+=column-rule($n, $s, $c)
+  -moz-column-rule: $n $s $c
+  -webkit-column-rule: $n $s $c
+  column-rule: $n $s $c
